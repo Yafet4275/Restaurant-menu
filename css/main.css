@@ -1,0 +1,82 @@
+/* targeting a div element with a class of "container" */
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* The first one belongs to top and botton margin and the second one belongs to  */
+}
+
+.menu-group {
+    /* border: 1px red solid; */
+    display: grid;
+    grid-template-columns: 1fr;         /*That gets one column and take a full width of the column*/
+    gap: 1.5em;                         /*Getting a gap for each item*/
+    /* border: 1px solid black; */
+    padding: 1.5em 0;                   /*The first one belongs to top and botton and the second one */
+}
+
+.title {
+    text-align: center;
+}
+
+h2, h3, .menu-item-text {
+    font-family: 'Andika', sans-serif;
+}
+
+.menu {
+    /* font-family: 'Andika', sans-serif; */
+    /* font-family: sans-serif; */
+    font-size: 14px;
+}
+
+.menu-group-heading {
+    margin: 40px auto;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc;
+}
+
+.menu-item {
+    display: flex;
+}
+
+.menu-item-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+    margin-left: 1em;
+}
+
+.menu-item-text {
+    flex-grow: 1;
+}
+
+.menu-item-name {
+    margin-right: 1.5em;
+}
+
+.menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.menu-item-description {
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 800px) {      /*Apply desktop style if the screen is more than 992px*/
+    .menu {
+        font-size: 16px;
+    }
+
+    .menu-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item-image {
+        width: 100px;
+        height: 100px;
+    }
+}
